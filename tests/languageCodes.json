@@ -1,0 +1,22 @@
+{
+    "languageCodes": {
+        "English": "en",
+        "Portogues": "pt",
+        "Czech": "cs",
+        "French": "fr",
+        "German": "de",
+        "Greek": "el",
+        "Italian": "it",
+        "Polish": "pl",
+        "Romanian" : "ro",
+        "Russian": "ru",
+        "Spanish": "es",
+        "Swedish" : "sv",
+        "Turkish": "tr",
+        "Jewish": "he",
+        "Hungarian": "hu",
+        "Danish" : "da",
+        "Norwegian": "no",
+        "Finnish" : "fo"
+    }
+}
