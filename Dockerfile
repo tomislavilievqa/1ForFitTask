@@ -40,7 +40,7 @@ RUN sudo php -r "copy('https://getcomposer.org/installer', 'composer-setup.php')
 
 RUN sudo composer require "codeception/codeception" --dev
 
-RUN git clone https://github.com/tomislavilievqa/1ForFitTask/tree/master.git
+RUN git clone https://github.com/tomislavilievqa/1ForFitTask.git
 WORKDIR /home/newuser/1ForFitTask
 
 EXPOSE 8080
