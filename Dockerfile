@@ -40,7 +40,8 @@ RUN sudo php -r "copy('https://getcomposer.org/installer', 'composer-setup.php')
 
 RUN sudo composer require "codeception/codeception" --dev
 
-RUN git clone https://github.com/tomislavilievqa/1ForFitTask.git
+RUN git clone https://github.com/tomislavilievqa/1ForFitTask.git && cd 1ForFitTask && git checkout master
+
 WORKDIR /home/newuser/1ForFitTask
 
 EXPOSE 8080
@@ -61,5 +62,5 @@ CMD ["bash"]
 # sudo composer require "codeception/codeception" --dev
 # php vendor/bin/codecept bootstrap
 
-# sudo git clone https://github.com/tomislavilievqa/1ForFitTask/tree/master.git
+# sudo git clone https://github.com/tomislavilievqa/1ForFitTask.git
 # sudo cd ~/oneforfitproject/1ForFitTask or ~/1ForFitTask
