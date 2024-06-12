@@ -38,6 +38,15 @@ RUN sudo php -r "copy('https://getcomposer.org/installer', 'composer-setup.php')
     sudo php -r "unlink('composer-setup.php');" && \
     sudo mv composer.phar /usr/local/bin/composer
 
+RUN sudo wget -q https://storage.googleapis.com/chrome-for-testing-public/125.0.6422.141/linux64/chrome-linux64.zip \
+    && sudo unzip chrome-linux64.zip -d /opt/ \
+    && sudo mv /opt/chrome-linux64 /opt/chrome \
+    && sudo rm chrome-linux64.zip
+
+RUN sudo wget -q https://storage.googleapis.com/chrome-for-testing-public/125.0.6422.141/linux64/chromedriver-linux64.zip \
+    && sudo unzip chromedriver-linux64.zip -d /usr/local/bin/ \
+    && sudo rm chromedriver-linux64.zip
+
 RUN sudo composer require "codeception/codeception" --dev
 
 RUN git clone https://github.com/tomislavilievqa/1ForFitTask.git && cd 1ForFitTask && git checkout master
