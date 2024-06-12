@@ -74,8 +74,8 @@ class LandingPageCest extends \Tests\Acceptance\BaseCest
     {
         $I->amOnPage('/login');
         $I->see('Discover the Secrets of The Keto World');
-        $I->fillField('email', 'funk.jalon1717398018@qa.1ff.space');
-        $I->fillField('password', '123qwerty');
+        $I->fillField('email', $this->credentials['valid']['email']);
+        $I->fillField('password', $this->credentials['valid']['password']);
         $I->checkOption('Remember Me');
         $I->click('Login');
         $I->see('My VIP content');
